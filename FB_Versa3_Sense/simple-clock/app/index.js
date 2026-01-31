@@ -33,13 +33,29 @@ let hourHand = document.getElementById("hourHand");
 let minuteHand = document.getElementById("minuteHand");
 let secondHand = document.getElementById("secondHand");
 
+// get a handle on tickmarks
 let zeroMinTick = document.getElementById("zeroMinTick");
 let oneMinTick = document.getElementById("oneMinTick");
 let twoMinTick = document.getElementById("twoMinTick");
 let threeMinTick = document.getElementById("threeMinTick");
 let fourMinTick = document.getElementById("fourMinTick");
 let fiveMinTick = document.getElementById("fiveMinTick");
+let sixMinTick = document.getElementById("sixMinTick");
+let sevenMinTick = document.getElementById("sevenMinTick");
+let eightMinTick = document.getElementById("eightMinTick");
+let nineMinTick = document.getElementById("nineMinTick");
+let tenMinTick = document.getElementById("tenMinTick");
+let elevenMinTick = document.getElementById("elevenMinTick");
+let twelveMinTick = document.getElementById("twelveMinTick");
+let thirteenMinTick = document.getElementById("thirteenMinTick");
+let fourteenMinTick = document.getElementById("fourteenMinTick");
+let fifteenMinTick = document.getElementById("fifteenMinTick");
 
+let sixteenMinTick = document.getElementById("sixteenMinTick");
+let seventeenMinTick = document.getElementById("seventeenMinTick");
+let eightteenMinTick = document.getElementById("eightteenMinTick");
+let nineteenMinTick = document.getElementById("nineteenMinTick");
+let twentyMinTick = document.getElementById("twentyMinTick");
 
 setTickMarks();
 
@@ -98,4 +114,20 @@ function setTickMarks() {
   threeMinTick.groupTransform.rotate.angle = 18;
   fourMinTick.groupTransform.rotate.angle = 24;
   fiveMinTick.groupTransform.rotate.angle = 30;
+  sixMinTick.groupTransform.rotate.angle = 36;
+  sevenMinTick.groupTransform.rotate.angle = 42;
+  eightMinTick.groupTransform.rotate.angle = 48;
+  nineMinTick.groupTransform.rotate.angle = 54;
+  tenMinTick.groupTransform.rotate.angle = 60;
+  elevenMinTick.groupTransform.rotate.angle = 66;
+  twelveMinTick.groupTransform.rotate.angle = 72;
+  thirteenMinTick.groupTransform.rotate.angle = 78;
+  fourteenMinTick.groupTransform.rotate.angle = 84;
+  fifteenMinTick.groupTransform.rotate.angle = 90;
+
+  sixteenMinTick.groupTransform.rotate.angle = 96;
+  seventeenMinTick.groupTransform.rotate.angle = 102;
+  eightteenMinTick.groupTransform.rotate.angle = 108;
+  nineteenMinTick.groupTransform.rotate.angle = 114;
+  twentyMinTick.groupTransform.rotate.angle = 120;
 }
