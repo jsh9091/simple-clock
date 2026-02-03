@@ -24,6 +24,9 @@
 
 import clock from "clock";
 import * as document from "document";
+import * as simpleSettings from "./simple/device-settings";
+
+let color = "white";
 
 // Tick every second
 clock.granularity = "seconds";
@@ -32,6 +35,9 @@ clock.granularity = "seconds";
 let hourHand = document.getElementById("hourHand");
 let minuteHand = document.getElementById("minuteHand");
 let secondHand = document.getElementById("secondHand");
+let minuteTickCutOffCircle = document.getElementById("minuteTickCutOffCircle");
+let hourTickCutOffCircle = document.getElementById("hourTickCutOffCircle");
+let backgroundCircle = document.getElementById("backgroundCircle");
 
 // get a handle on tickmarks
 let oneMinTick = document.getElementById("oneMinTick");
@@ -207,4 +213,28 @@ function setTickMarks() {
   fiftyeightMinTick.groupTransform.rotate.angle = 348;
   fiftynineMinTick.groupTransform.rotate.angle = 354;
   sixtyMinTick.groupTransform.rotate.angle = 0;
+}
+
+/**
+ * Get and process settings changes.
+ * @param {*} data 
+ * @returns 
+ */
+function settingsCallback(data) {
+  if (!data) {
+    return;
+  }
+
+  if (data.color) {
+    color = data.color;
+    setColor();
+  }
+
+}
+simpleSettings.initialize(settingsCallback);
+
+function setColor() {
+  hourTickCutOffCircle.style.fill = color;
+  minuteTickCutOffCircle.style.fill = color;
+  backgroundCircle.style.fill = color;
 }
