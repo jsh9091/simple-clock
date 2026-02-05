@@ -35,14 +35,9 @@ registerSettingsPage(({ settings }) => (
         settingsKey="color"
         colors={[
           { color: "white" },
-          { color: "chartreuse" },
           { color: "cyan" },
           { color: "gold" },
           { color: "goldenrod" },
-          { color: "greenyellow" },
-          { color: "honeydew" },
-          { color: "khaki" },
-          { color: "lawngreen" },
           { color: "lemonchiffon" },
           { color: "lightblue" },
           { color: "lightcoral" },
@@ -52,7 +47,6 @@ registerSettingsPage(({ settings }) => (
           { color: "palegoldenrod" },
           { color: "rosybrown" },
           { color: "skyblue" },
-          { color: "turquoise" },
           { color: "violet" },
           { color: "wheat" },
           { color: "yellow" },
