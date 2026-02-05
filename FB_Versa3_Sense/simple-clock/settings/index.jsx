@@ -53,6 +53,10 @@ registerSettingsPage(({ settings }) => (
           { color: "yellowgreen" },
         ]}
       />
+      <Toggle
+          settingsKey="showSeconds"
+          label="Show Seconds Hand"
+      />
     </Section>
   </Page>
 ));

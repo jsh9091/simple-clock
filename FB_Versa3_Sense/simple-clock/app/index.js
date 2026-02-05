@@ -27,6 +27,7 @@ import * as document from "document";
 import * as simpleSettings from "./simple/device-settings";
 
 let color = "white";
+let showSeconds = true;
 
 // Tick every second
 clock.granularity = "seconds";
@@ -35,6 +36,7 @@ clock.granularity = "seconds";
 let hourHand = document.getElementById("hourHand");
 let minuteHand = document.getElementById("minuteHand");
 let secondHand = document.getElementById("secondHand");
+let secondHandCenter = document.getElementById("secondHandCenter");
 let minuteTickCutOffCircle = document.getElementById("minuteTickCutOffCircle");
 let hourTickCutOffCircle = document.getElementById("hourTickCutOffCircle");
 let backgroundCircle = document.getElementById("backgroundCircle");
@@ -228,6 +230,19 @@ function settingsCallback(data) {
   if (data.color) {
     color = data.color;
     setColor();
+  }
+
+  if (data.showSeconds !== undefined && data.showSeconds !== null) {
+    showSeconds = data.showSeconds;
+    if (showSeconds) {
+      clock.granularity = "seconds";
+      secondHand.style.display = "inline";
+      secondHandCenter.style.fill = "red";
+    } else {
+      clock.granularity = "minutes";
+      secondHand.style.display = "none";
+      secondHandCenter.style.fill = "black";
+    }
   }
 
 }

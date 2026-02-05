@@ -26,12 +26,14 @@ import * as messaging from "messaging";
 import { settingsStorage } from "settings";
 
 const KEY_COLOR = "color";
+const KEY_SECONDS = "showSeconds";
 
 /**
  * Establishes values for default settings on fresh install.
  */
 export function setDefaultSettings() {
   setDefaultSetting(KEY_COLOR, "white");
+  setDefaultSetting(KEY_SECONDS, true);
 }
 
 /**
@@ -61,6 +63,9 @@ export function initialize() {
 
       let newValue = "";
       if (evt.key == KEY_COLOR) {
+        newValue = evt.newValue;
+
+      } else if (evt.key == KEY_SECONDS) {
         newValue = evt.newValue;
       }
 
