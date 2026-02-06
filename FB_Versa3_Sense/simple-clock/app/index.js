@@ -36,6 +36,7 @@ clock.granularity = "seconds";
 let hourHand = document.getElementById("hourHand");
 let minuteHand = document.getElementById("minuteHand");
 let secondHand = document.getElementById("secondHand");
+let secondHandRect = document.getElementById("secondHandRect");
 let secondHandCenter = document.getElementById("secondHandCenter");
 let minuteTickCutOffCircle = document.getElementById("minuteTickCutOffCircle");
 let hourTickCutOffCircle = document.getElementById("hourTickCutOffCircle");
@@ -237,19 +238,30 @@ function settingsCallback(data) {
     if (showSeconds) {
       clock.granularity = "seconds";
       secondHand.style.display = "inline";
-      secondHandCenter.style.fill = "red";
     } else {
       clock.granularity = "minutes";
       secondHand.style.display = "none";
       secondHandCenter.style.fill = "black";
     }
+    setColor();
   }
-
 }
 simpleSettings.initialize(settingsCallback);
 
+/**
+ * Updates colors.
+ */
 function setColor() {
   hourTickCutOffCircle.style.fill = color;
   minuteTickCutOffCircle.style.fill = color;
   backgroundCircle.style.fill = color;
+
+  if (showSeconds) {
+    secondHandRect.style.fill = "red";
+    secondHandCenter.style.fill = "red";
+    if (color === "red") {
+      secondHandRect.style.fill = "black";
+      secondHandCenter.style.fill = "black";
+    }
+  }
 }
