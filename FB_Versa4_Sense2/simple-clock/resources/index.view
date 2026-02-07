@@ -1,0 +1,231 @@
+<!--
+  MIT License
+
+  Copyright (c) 2026 Joshua Horvath
+  
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+ 
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE. -->
+
+<svg viewport-fill="black">
+
+  <rect id="background" />
+
+  <circle id="backgroundCircle" cx="50%" cy="50%" r="168" fill="white" />
+
+  <!-- tick marks for minutes -->
+  <g id="oneMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"  />
+  </g>
+  <g id="twoMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="threeMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="fourMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"/>
+  </g>
+  <g id="sixMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"  />
+  </g>
+  <g id="sevenMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="eightMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="nineMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"/>
+  </g>
+  <g id="elevenMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"  />
+  </g>
+  <g id="twelveMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="thirteenMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="fourteenMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"/>
+  </g>
+  <g id="sixteenMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"  />
+  </g>
+  <g id="seventeenMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="eightteenMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="nineteenMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"/>
+  </g>
+  <g id="twentyoneMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"  />
+  </g>
+  <g id="twentytwoMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="twentythreeMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="twentyfourMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"/>
+  </g>
+  <g id="twentysixMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"  />
+  </g>
+  <g id="twentysevenMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="twentyeightMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="twentynineMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"/>
+  </g>
+  <g id="thirtyoneMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"  />
+  </g>
+  <g id="thirtytwoMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="thirtythreeMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="thirtyfourMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"/>
+  </g>
+  <g id="thirtysixMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"  />
+  </g>
+  <g id="thirtysevenMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="thirtyeightMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="thirtynineMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"/>
+  </g>
+  <g id="fortyoneMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"  />
+  </g>
+  <g id="fortytwoMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="fortythreeMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="fortyfourMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"/>
+  </g>
+  <g id="fortysixMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"  />
+  </g>
+  <g id="fortysevenMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="fortyeightMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="fortynineMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"/>
+  </g>
+  <g id="fiftyoneMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"  />
+  </g>
+  <g id="fiftytwoMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="fiftythreeMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="fiftyfourMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"/>
+  </g>
+  <g id="fiftysixMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"  />
+  </g>
+  <g id="fiftysevenMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="fiftyeightMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick" />
+  </g>
+  <g id="fiftynineMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="minorTick"/>
+  </g>
+
+  <circle id="minuteTickCutOffCircle" cx="50%" cy="50%" r="152" fill="white" />
+
+  <!-- tick marks for hours -->
+  <g id="fiveMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="majorTick" />
+  </g>
+  <g id="tenMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="majorTick" />
+  </g>
+  <g id="fifteenMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="majorTick" />
+  </g>
+  <g id="twentyMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="majorTick" />
+  </g>
+  <g id="twentyfiveMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="majorTick" />
+  </g>
+  <g id="thirtyMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="majorTick" />
+  </g>
+  <g id="thirtyfiveMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="majorTick" />
+  </g>
+  <g id="fortyMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="majorTick" />
+  </g>
+  <g id="fortyfiveMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="majorTick" />
+  </g>
+  <g id="fiftyMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="majorTick" />
+  </g>
+  <g id="fiftyfiveMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="majorTick" />
+  </g>
+  <g id="sixtyMinTick" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-170" height="170" class="majorTick"  />
+  </g>
+
+  <circle id="hourTickCutOffCircle" cx="50%" cy="50%" r="140" fill="white" />
+
+  <!-- Clock Hands -->
+  <g id="hourHand" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-6" y="-75" width="7" height="75" fill="black" />
+  </g>
+  <g id="minuteHand" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-115" width="5" height="115" fill="black" />
+  </g>
+  <g id="secondHand" pointer-events="visible" transform="translate(50%,50%)">
+    <rect id="secondHandRect" x="$-2" y="-130" width="3" height="160" fill="red" />
+  </g>
+  <circle id="secondHandCenter" cx="50%" cy="50%" r="10" fill="red" />
+  <circle cx="50%" cy="50%" r="5" fill="black" />
+
+</svg>
