@@ -36,13 +36,15 @@ clock.granularity = "seconds";
 let hourHand = document.getElementById("hourHand");
 let minuteHand = document.getElementById("minuteHand");
 let secondHand = document.getElementById("secondHand");
+let hourHandRect = document.getElementById("hourHandRect");
+let minuteHandRect = document.getElementById("minuteHandRect");
 let secondHandRect = document.getElementById("secondHandRect");
 let secondHandCenter = document.getElementById("secondHandCenter");
 let minuteTickCutOffCircle = document.getElementById("minuteTickCutOffCircle");
 let hourTickCutOffCircle = document.getElementById("hourTickCutOffCircle");
 let backgroundCircle = document.getElementById("backgroundCircle");
 
-// get a handle on tickmarks
+// get a handle on tickmarks groups
 let oneMinTick = document.getElementById("oneMinTick");
 let twoMinTick = document.getElementById("twoMinTick");
 let threeMinTick = document.getElementById("threeMinTick");
@@ -104,6 +106,67 @@ let fiftyeightMinTick = document.getElementById("fiftyeightMinTick");
 let fiftynineMinTick = document.getElementById("fiftynineMinTick");
 let sixtyMinTick = document.getElementById("sixtyMinTick");
 
+// get actual hand rectangles 
+let oneMinTickRect = document.getElementById("oneMinTickRect");
+let twoMinTickRect = document.getElementById("twoMinTickRect");
+let threeMinTickRect = document.getElementById("threeMinTickRect");
+let fourMinTickRect = document.getElementById("fourMinTickRect");
+let fiveMinTickRect = document.getElementById("fiveMinTickRect");
+let sixMinTickRect = document.getElementById("sixMinTickRect");
+let sevenMinTickRect = document.getElementById("sevenMinTickRect");
+let eightMinTickRect = document.getElementById("eightMinTickRect");
+let nineMinTickRect = document.getElementById("nineMinTickRect");
+let tenMinTickRect = document.getElementById("tenMinTickRect");
+let elevenMinTickRect = document.getElementById("elevenMinTickRect");
+let twelveMinTickRect = document.getElementById("twelveMinTickRect");
+let thirteenMinTickRect = document.getElementById("thirteenMinTickRect");
+let fourteenMinTickRect = document.getElementById("fourteenMinTickRect");
+let fifteenMinTickRect = document.getElementById("fifteenMinTickRect");
+let sixteenMinTickRect = document.getElementById("sixteenMinTickRect");
+let seventeenMinTickRect = document.getElementById("seventeenMinTickRect");
+let eightteenMinTickRect = document.getElementById("eightteenMinTickRect");
+let nineteenMinTickRect = document.getElementById("nineteenMinTickRect");
+let twentyMinTickRect = document.getElementById("twentyMinTickRect");
+let twentyoneMinTickRect = document.getElementById("twentyoneMinTickRect");
+let twentytwoMinTickRect = document.getElementById("twentytwoMinTickRect");
+let twentythreeMinTickRect = document.getElementById("twentythreeMinTickRect");
+let twentyfourMinTickRect = document.getElementById("twentyfourMinTickRect");
+let twentyfiveMinTickRect = document.getElementById("twentyfiveMinTickRect");
+let twentysixMinTickRect = document.getElementById("twentysixMinTickRect");
+let twentysevenMinTickRect = document.getElementById("twentysevenMinTickRect");
+let twentyeightMinTickRect = document.getElementById("twentyeightMinTickRect");
+let twentynineMinTickRect = document.getElementById("twentynineMinTickRect");
+let thirtyMinTickRect = document.getElementById("thirtyMinTickRect");
+let thirtyoneMinTickRect = document.getElementById("thirtyoneMinTickRect");
+let thirtytwoMinTickRect = document.getElementById("thirtytwoMinTickRect");
+let thirtythreeMinTickRect = document.getElementById("thirtythreeMinTickRect");
+let thirtyfourMinTickRect = document.getElementById("thirtyfourMinTickRect");
+let thirtyfiveMinTickRect = document.getElementById("thirtyfiveMinTickRect");
+let thirtysixMinTickRect = document.getElementById("thirtysixMinTickRect");
+let thirtysevenMinTickRect = document.getElementById("thirtysevenMinTickRect");
+let thirtyeightMinTickRect = document.getElementById("thirtyeightMinTickRect");
+let thirtynineMinTickRect = document.getElementById("thirtynineMinTickRect");
+let fortyMinTickRect = document.getElementById("fortyMinTickRect");
+let fortyoneMinTickRect = document.getElementById("fortyoneMinTickRect");
+let fortytwoMinTickRect = document.getElementById("fortytwoMinTickRect");
+let fortythreeMinTickRect = document.getElementById("fortythreeMinTickRect");
+let fortyfourMinTickRect = document.getElementById("fortyfourMinTickRect");
+let fortyfiveMinTickRect = document.getElementById("fortyfiveMinTickRect");
+let fortysixMinTickRect = document.getElementById("fortysixMinTickRect");
+let fortysevenMinTickRect = document.getElementById("fortysevenMinTickRect");
+let fortyeightMinTickRect = document.getElementById("fortyeightMinTickRect");
+let fortynineMinTickRect = document.getElementById("fortynineMinTickRect");
+let fiftyMinTickRect = document.getElementById("fiftyMinTickRect");
+let fiftyoneMinTickRect = document.getElementById("fiftyoneMinTickRect");
+let fiftytwoMinTickRect = document.getElementById("fiftytwoMinTickRect");
+let fiftythreeMinTickRect = document.getElementById("fiftythreeMinTickRect");
+let fiftyfourMinTickRect = document.getElementById("fiftyfourMinTickRect");
+let fiftyfiveMinTickRect = document.getElementById("fiftyfiveMinTickRect");
+let fiftysixMinTickRect = document.getElementById("fiftysixMinTickRect");
+let fiftysevenMinTickRect = document.getElementById("fiftysevenMinTickRect");
+let fiftyeightMinTickRect = document.getElementById("fiftyeightMinTickRect");
+let fiftynineMinTickRect = document.getElementById("fiftynineMinTickRect");
+let sixtyMinTickRect = document.getElementById("sixtyMinTickRect");
 
 setTickMarks();
 
@@ -245,6 +308,16 @@ function settingsCallback(data) {
     }
     setColor();
   }
+
+  if (color === "black") {
+    updateTickColor("white");
+    hourHandRect.style.fill = "white";
+    minuteHandRect.style.fill = "white";
+  } else {
+    updateTickColor("black")
+    hourHandRect.style.fill = "black";
+    minuteHandRect.style.fill = "black";
+  }
 }
 simpleSettings.initialize(settingsCallback);
 
@@ -264,4 +337,67 @@ function setColor() {
       secondHandCenter.style.fill = "black";
     }
   }
+}
+
+function updateTickColor(color) {
+  oneMinTickRect.style.fill = color;
+  twoMinTickRect.style.fill = color;
+  threeMinTickRect.style.fill = color;
+  fourMinTickRect.style.fill = color;
+  fiveMinTickRect.style.fill = color;
+  sixMinTickRect.style.fill = color;
+  sevenMinTickRect.style.fill = color;
+  eightMinTickRect.style.fill = color;
+  nineMinTickRect.style.fill = color;
+  tenMinTickRect.style.fill = color;
+  elevenMinTickRect.style.fill = color;
+  twelveMinTickRect.style.fill = color;
+  thirteenMinTickRect.style.fill = color;
+  fourteenMinTickRect.style.fill = color;
+  fifteenMinTickRect.style.fill = color;
+  sixteenMinTickRect.style.fill = color;
+  seventeenMinTickRect.style.fill = color;
+  eightteenMinTickRect.style.fill = color;
+  nineteenMinTickRect.style.fill = color;
+  twentyMinTickRect.style.fill = color;
+  twentyoneMinTickRect.style.fill = color;
+  twentytwoMinTickRect.style.fill = color;
+  twentythreeMinTickRect.style.fill = color;
+  twentyfourMinTickRect.style.fill = color;
+  twentyfiveMinTickRect.style.fill = color;
+  twentysixMinTickRect.style.fill = color;
+  twentysevenMinTickRect.style.fill = color;
+  twentyeightMinTickRect.style.fill = color;
+  twentynineMinTickRect.style.fill = color;
+  thirtyMinTickRect.style.fill = color;
+  thirtyoneMinTickRect.style.fill = color;
+  thirtytwoMinTickRect.style.fill = color;
+  thirtythreeMinTickRect.style.fill = color;
+  thirtyfourMinTickRect.style.fill = color;
+  thirtyfiveMinTickRect.style.fill = color;
+  thirtysixMinTickRect.style.fill = color;
+  thirtysevenMinTickRect.style.fill = color;
+  thirtyeightMinTickRect.style.fill = color;
+  thirtynineMinTickRect.style.fill = color;
+  fortyMinTickRect.style.fill = color;
+  fortyoneMinTickRect.style.fill = color;
+  fortytwoMinTickRect.style.fill = color;
+  fortythreeMinTickRect.style.fill = color;
+  fortyfourMinTickRect.style.fill = color;
+  fortyfiveMinTickRect.style.fill = color;
+  fortysixMinTickRect.style.fill = color;
+  fortysevenMinTickRect.style.fill = color;
+  fortyeightMinTickRect.style.fill = color;
+  fortynineMinTickRect.style.fill = color;
+  fiftyMinTickRect.style.fill = color;
+  fiftyoneMinTickRect.style.fill = color;
+  fiftytwoMinTickRect.style.fill = color;
+  fiftythreeMinTickRect.style.fill = color;
+  fiftyfourMinTickRect.style.fill = color;
+  fiftyfiveMinTickRect.style.fill = color;
+  fiftysixMinTickRect.style.fill = color;
+  fiftysevenMinTickRect.style.fill = color;
+  fiftyeightMinTickRect.style.fill = color;
+  fiftynineMinTickRect.style.fill = color;
+  sixtyMinTickRect.style.fill = color;
 }

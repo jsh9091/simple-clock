@@ -52,6 +52,7 @@ registerSettingsPage(({ settings }) => (
           { color: "yellow" },
           { color: "yellowgreen" },
           { color: "red" },
+          { color: "black" },
         ]}
       />
       <Toggle
