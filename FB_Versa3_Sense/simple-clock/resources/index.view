@@ -215,18 +215,18 @@
 
   <circle id="hourTickCutOffCircle" cx="50%" cy="50%" r="140" fill="white" />
 
-  <text id="oneLabel" class="numbers" x="230" y="74">1</text>
-  <text id="twoLabel" class="numbers" x="274" y="116">2</text>
-  <text id="threeLabel" class="numbers" x="292" y="177">3</text>
-  <text id="fourLabel" class="numbers" x="273" y="242">4</text>
-  <text id="fiveLabel" class="numbers" x="229" y="283">5</text>
-  <text id="sixLabel" class="numbers" x="168" y="300">6</text>
-  <text id="sevenLabel" class="numbers" x="107" y="283">7</text>
-  <text id="eightLabel" class="numbers" x="64" y="242">8</text>
-  <text id="nineLabel" class="numbers" x="44" y="177">9</text>
-  <text id="tenLabel" class="numbers" x="68" y="116">10</text>
-  <text id="elevenLabel" class="numbers" x="107" y="74">11</text>
-  <text id="twelveLabel" class="numbers" x="168" y="54">12</text>
+  <text id="oneLabel" class="numbers" x="230" y="74" />
+  <text id="twoLabel" class="numbers" x="274" y="116" />
+  <text id="threeLabel" class="numbers" x="292" y="177" />
+  <text id="fourLabel" class="numbers" x="273" y="242" />
+  <text id="fiveLabel" class="numbers" x="229" y="283" />
+  <text id="sixLabel" class="numbers" x="168" y="300" />
+  <text id="sevenLabel" class="numbers" x="107" y="283" />
+  <text id="eightLabel" class="numbers" x="64" y="242" />
+  <text id="nineLabel" class="numbers" x="44" y="177" />
+  <text id="tenLabel" class="numbers" x="68" y="116" />
+  <text id="elevenLabel" class="numbers" x="107" y="74" />
+  <text id="twelveLabel" class="numbers" x="168" y="54" />
 
   <!-- Clock Hands -->
   <g id="hourHand" pointer-events="visible" transform="translate(50%,50%)">

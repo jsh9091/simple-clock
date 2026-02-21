@@ -28,6 +28,7 @@ import * as simpleSettings from "./simple/device-settings";
 
 let color = "white";
 let showSeconds = true;
+let showNumbers = false;
 
 // Tick every second
 clock.granularity = "seconds";
@@ -167,6 +168,19 @@ let fiftysevenMinTickRect = document.getElementById("fiftysevenMinTickRect");
 let fiftyeightMinTickRect = document.getElementById("fiftyeightMinTickRect");
 let fiftynineMinTickRect = document.getElementById("fiftynineMinTickRect");
 let sixtyMinTickRect = document.getElementById("sixtyMinTickRect");
+
+let oneLabel = document.getElementById("oneLabel");
+let twoLabel = document.getElementById("twoLabel");
+let threeLabel = document.getElementById("threeLabel");
+let fourLabel = document.getElementById("fourLabel");
+let fiveLabel = document.getElementById("fiveLabel");
+let sixLabel = document.getElementById("sixLabel");
+let sevenLabel = document.getElementById("sevenLabel");
+let eightLabel = document.getElementById("eightLabel");
+let nineLabel = document.getElementById("nineLabel");
+let tenLabel = document.getElementById("tenLabel");
+let elevenLabel = document.getElementById("elevenLabel");
+let twelveLabel = document.getElementById("twelveLabel");
 
 setTickMarks();
 
@@ -309,6 +323,12 @@ function settingsCallback(data) {
     setColor();
   }
 
+  if (data.showNumbers !== undefined && data.showNumbers !== null) {
+    showNumbers = data.showNumbers;
+
+    updateNumbers();
+  }
+
   if (color === "black") {
     updateTickColor("white");
     hourHandRect.style.fill = "white";
@@ -400,4 +420,35 @@ function updateTickColor(color) {
   fiftyeightMinTickRect.style.fill = color;
   fiftynineMinTickRect.style.fill = color;
   sixtyMinTickRect.style.fill = color;
+}
+
+function updateNumbers() {
+
+  if (showNumbers) {
+    oneLabel.text = "1";
+    twoLabel.text = "2";
+    threeLabel.text = "3";
+    fourLabel.text = "4";
+    fiveLabel.text = "5";
+    sixLabel.text = "6";
+    sevenLabel.text = "7";
+    eightLabel.text = "8";
+    nineLabel.text = "9";
+    tenLabel.text = "10";
+    elevenLabel.text = "11";
+    twelveLabel.text = "12";
+  } else {
+    oneLabel.text = "";
+    twoLabel.text = "";
+    threeLabel.text = "";
+    fourLabel.text = "";
+    fiveLabel.text = "";
+    sixLabel.text = "";
+    sevenLabel.text = "";
+    eightLabel.text = "";
+    nineLabel.text = "";
+    tenLabel.text = "";
+    elevenLabel.text = "";
+    twelveLabel.text = "";
+  }
 }

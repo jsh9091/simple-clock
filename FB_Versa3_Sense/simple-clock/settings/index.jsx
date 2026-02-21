@@ -59,6 +59,10 @@ registerSettingsPage(({ settings }) => (
           settingsKey="showSeconds"
           label="Show Seconds Hand"
       />
+      <Toggle
+          settingsKey="showNumbers"
+          label="Show Numbers"
+      />
     </Section>
   </Page>
 ));
