@@ -20,3 +20,11 @@
   fill: black;
   width: 6;
 }
+
+.numbers {
+  font-size: 25;
+  font-family: FBNucleon-Black;
+  text-anchor: middle;
+  text-length: 3;
+  fill: black;
+}
