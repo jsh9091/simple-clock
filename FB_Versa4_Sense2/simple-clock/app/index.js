@@ -357,6 +357,7 @@ function setColor() {
       secondHandCenter.style.fill = "black";
     }
   }
+  updateNumbers();
 }
 
 function updateTickColor(color) {
@@ -422,6 +423,9 @@ function updateTickColor(color) {
   sixtyMinTickRect.style.fill = color;
 }
 
+/**
+ * Performs display update operations for clock numbers.
+ */
 function updateNumbers() {
 
   if (showNumbers) {
@@ -437,6 +441,36 @@ function updateNumbers() {
     tenLabel.text = "10";
     elevenLabel.text = "11";
     twelveLabel.text = "12";
+
+    if (color === "black") {
+      const colorForBlack = "white";
+      oneLabel.style.fill = colorForBlack;
+      twoLabel.style.fill = colorForBlack;
+      threeLabel.style.fill = colorForBlack;
+      fourLabel.style.fill = colorForBlack;
+      fiveLabel.style.fill = colorForBlack;
+      sixLabel.style.fill = colorForBlack;
+      sevenLabel.style.fill = colorForBlack;
+      eightLabel.style.fill = colorForBlack;
+      nineLabel.style.fill = colorForBlack;
+      tenLabel.style.fill = colorForBlack;
+      elevenLabel.style.fill = colorForBlack;
+      twelveLabel.style.fill = colorForBlack;
+    } else {
+      const colorForNotBlack = "black";
+      oneLabel.style.fill = colorForNotBlack;
+      twoLabel.style.fill = colorForNotBlack;
+      threeLabel.style.fill = colorForNotBlack;
+      fourLabel.style.fill = colorForNotBlack;
+      fiveLabel.style.fill = colorForNotBlack;
+      sixLabel.style.fill = colorForNotBlack;
+      sevenLabel.style.fill = colorForNotBlack;
+      eightLabel.style.fill = colorForNotBlack;
+      nineLabel.style.fill = colorForNotBlack;
+      tenLabel.style.fill = colorForNotBlack;
+      elevenLabel.style.fill = colorForNotBlack;
+      twelveLabel.style.fill = colorForNotBlack;
+    }
   } else {
     oneLabel.text = "";
     twoLabel.text = "";
