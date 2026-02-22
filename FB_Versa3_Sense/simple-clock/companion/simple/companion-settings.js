@@ -28,6 +28,7 @@ import { settingsStorage } from "settings";
 const KEY_COLOR = "color";
 const KEY_SECONDS = "showSeconds";
 const KEY_NUMBERS = "showNumbers";
+const KEY_DATE = "showDate";
 
 /**
  * Establishes values for default settings on fresh install.
@@ -36,6 +37,7 @@ export function setDefaultSettings() {
   setDefaultSetting(KEY_COLOR, "white");
   setDefaultSetting(KEY_SECONDS, true);
   setDefaultSetting(KEY_NUMBERS, false);
+  setDefaultSetting(KEY_DATE, false);
 }
 
 /**
@@ -71,6 +73,9 @@ export function initialize() {
         newValue = evt.newValue;
 
       } else if (evt.key == KEY_NUMBERS) {
+        newValue = evt.newValue;
+
+      } else if (evt.key == KEY_DATE) {
         newValue = evt.newValue;
       }
 

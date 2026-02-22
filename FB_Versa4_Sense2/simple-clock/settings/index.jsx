@@ -63,6 +63,10 @@ registerSettingsPage(({ settings }) => (
           settingsKey="showNumbers"
           label="Show Numbers"
       />
+      <Toggle
+          settingsKey="showDate"
+          label="Show Date"
+      />
     </Section>
   </Page>
 ));

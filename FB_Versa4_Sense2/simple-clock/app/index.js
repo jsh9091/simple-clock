@@ -29,6 +29,7 @@ import * as simpleSettings from "./simple/device-settings";
 let color = "white";
 let showSeconds = true;
 let showNumbers = false;
+let showDate = false;
 
 // Tick every second
 clock.granularity = "seconds";
@@ -198,7 +199,7 @@ function updateClock() {
   minuteHand.groupTransform.rotate.angle = minutesToAngle(mins);
   secondHand.groupTransform.rotate.angle = secondsToAngle(secs);
 
-  updateDateFields(today)
+  updateDateField(today)
 }
 
 // Update the clock every tick event
@@ -208,12 +209,16 @@ clock.addEventListener("tick", updateClock);
  * Set the date field. 
  * @param {*} date 
  */
-function updateDateFields(date) {
-  const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  let index = date.getDay();
-  let dayOfMonth = date.getDate();
+function updateDateField(date) {
+  if (showDate) {
+    const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let index = date.getDay();
+    let dayOfMonth = date.getDate();
 
-  datelabel.text = dayNames[index] + " " + dayOfMonth;
+    datelabel.text = dayNames[index] + " " + dayOfMonth;
+  } else {
+    datelabel.text = "";
+  }
 }
 
 /**
@@ -343,15 +348,22 @@ function settingsCallback(data) {
 
     updateNumbers();
   }
+  if (data.showDate !== undefined && data.showDate !== null) {
+    showDate = data.showDate;
+
+    updateDateField(new Date());
+  }
 
   if (color === "black") {
     updateTickColor("white");
     hourHandRect.style.fill = "white";
     minuteHandRect.style.fill = "white";
+    datelabel.style.fill = "white";
   } else {
     updateTickColor("black")
     hourHandRect.style.fill = "black";
     minuteHandRect.style.fill = "black";
+    datelabel.style.fill = "black";
   }
 }
 simpleSettings.initialize(settingsCallback);
@@ -369,6 +381,12 @@ function setColor() {
     secondHandCenter.style.fill = "red";
     if (color === "red") {
       secondHandRect.style.fill = "black";
+      secondHandCenter.style.fill = "black";
+    }
+  } else {
+    if (color === "black") {
+      secondHandCenter.style.fill = "white";
+    } else {
       secondHandCenter.style.fill = "black";
     }
   }
