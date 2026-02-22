@@ -228,6 +228,8 @@
   <text id="elevenLabel" class="numbers" x="107" y="74" />
   <text id="twelveLabel" class="numbers" x="168" y="54" />
 
+  <text id="datelabel" x="50%" y="72%" />
+
   <!-- Clock Hands -->
   <g id="hourHand" pointer-events="visible" transform="translate(50%,50%)">
     <rect id="hourHandRect" x="$-6" y="-75" width="8" height="75" fill="black" />

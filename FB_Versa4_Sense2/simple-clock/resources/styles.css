@@ -28,3 +28,11 @@
   text-length: 3;
   fill: black;
 }
+
+#datelabel {
+  font-size: 28;
+  font-family: FBNucleon-Bold;
+  text-anchor: middle;
+  text-length: 7;
+  fill: black;
+}

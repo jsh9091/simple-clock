@@ -44,6 +44,7 @@ let secondHandCenter = document.getElementById("secondHandCenter");
 let minuteTickCutOffCircle = document.getElementById("minuteTickCutOffCircle");
 let hourTickCutOffCircle = document.getElementById("hourTickCutOffCircle");
 let backgroundCircle = document.getElementById("backgroundCircle");
+let datelabel = document.getElementById("datelabel");
 
 // get a handle on tickmarks groups
 let oneMinTick = document.getElementById("oneMinTick");
@@ -196,10 +197,24 @@ function updateClock() {
   hourHand.groupTransform.rotate.angle = hoursToAngle(hours, mins);
   minuteHand.groupTransform.rotate.angle = minutesToAngle(mins);
   secondHand.groupTransform.rotate.angle = secondsToAngle(secs);
+
+  updateDateFields(today)
 }
 
 // Update the clock every tick event
 clock.addEventListener("tick", updateClock);
+
+/**
+ * Set the date field. 
+ * @param {*} date 
+ */
+function updateDateFields(date) {
+  const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let index = date.getDay();
+  let dayOfMonth = date.getDate();
+
+  datelabel.text = dayNames[index] + " " + dayOfMonth;
+}
 
 /**
  * Returns an angle (0-360) for the current hour in the day.
