@@ -215,18 +215,19 @@
 
   <circle id="hourTickCutOffCircle" cx="50%" cy="50%" r="140" fill="white" />
 
+  <!-- Hour number labels -->
   <text id="oneLabel" class="numbers" x="230" y="74" />
-  <text id="twoLabel" class="numbers" x="274" y="116" />
+  <text id="twoLabel" class="numbers" x="273" y="114" />
   <text id="threeLabel" class="numbers" x="292" y="177" />
-  <text id="fourLabel" class="numbers" x="273" y="242" />
-  <text id="fiveLabel" class="numbers" x="229" y="283" />
-  <text id="sixLabel" class="numbers" x="168" y="300" />
-  <text id="sevenLabel" class="numbers" x="107" y="283" />
-  <text id="eightLabel" class="numbers" x="64" y="242" />
+  <text id="fourLabel" class="numbers" x="273" y="241" />
+  <text id="fiveLabel" class="numbers" x="229" y="282" />
+  <text id="sixLabel" class="numbers" x="169" y="299" />
+  <text id="sevenLabel" class="numbers" x="107" y="282" />
+  <text id="eightLabel" class="numbers" x="64" y="241" />
   <text id="nineLabel" class="numbers" x="44" y="177" />
-  <text id="tenLabel" class="numbers" x="68" y="116" />
+  <text id="tenLabel" class="numbers" x="70" y="114" />
   <text id="elevenLabel" class="numbers" x="107" y="74" />
-  <text id="twelveLabel" class="numbers" x="168" y="54" />
+  <text id="twelveLabel" class="numbers" x="168" y="55" />
 
   <text id="datelabel" x="50%" y="72%" />
 
