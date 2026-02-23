@@ -48,6 +48,7 @@ let minuteTickCutOffCircle = document.getElementById("minuteTickCutOffCircle");
 let hourTickCutOffCircle = document.getElementById("hourTickCutOffCircle");
 let backgroundCircle = document.getElementById("backgroundCircle");
 let datelabel = document.getElementById("datelabel");
+let moonIcon = document.getElementById("moonIcon");
 
 // get a handle on tickmarks groups
 let oneMinTick = document.getElementById("oneMinTick");
@@ -185,8 +186,6 @@ let nineLabel = document.getElementById("nineLabel");
 let tenLabel = document.getElementById("tenLabel");
 let elevenLabel = document.getElementById("elevenLabel");
 let twelveLabel = document.getElementById("twelveLabel");
-
-let moonIcon = document.getElementById("moonIcon");
 
 setTickMarks();
 
@@ -364,11 +363,13 @@ function settingsCallback(data) {
     hourHandRect.style.fill = "white";
     minuteHandRect.style.fill = "white";
     datelabel.style.fill = "white";
+    moonIcon.style.fill = "white";
   } else {
     updateTickColor("black")
     hourHandRect.style.fill = "black";
     minuteHandRect.style.fill = "black";
     datelabel.style.fill = "black";
+    moonIcon.style.fill = "black";
   }
 }
 simpleSettings.initialize(settingsCallback);
