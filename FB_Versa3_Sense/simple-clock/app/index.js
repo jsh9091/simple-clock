@@ -49,6 +49,7 @@ let hourTickCutOffCircle = document.getElementById("hourTickCutOffCircle");
 let backgroundCircle = document.getElementById("backgroundCircle");
 let datelabel = document.getElementById("datelabel");
 let moonIcon = document.getElementById("moonIcon");
+let moonPaseLabel = document.getElementById("moonPaseLabel");
 
 // get a handle on tickmarks groups
 let oneMinTick = document.getElementById("oneMinTick");
@@ -203,6 +204,7 @@ function updateClock() {
   secondHand.groupTransform.rotate.angle = secondsToAngle(secs);
 
   updatePhaseIcon(today);
+  updatePhaseLabel(today);
   updateDateField(today);
 }
 
@@ -562,4 +564,38 @@ function updatePhaseIcon(date) {
             // something went wrong
             moonIcon.image = "";
     }
+}
+
+/**
+ * Displays a very short label for moon phase. 
+ * Will display, "New", "Full", "Wax", "Wan", or
+ * if there is an error or unexpected condition 
+ * an empty string will be set in label.
+ * @param {*} date 
+ */
+function updatePhaseLabel(date) {
+    const phase = moon.getLunarPhase(date);
+
+    if (phase === moon.newMoon) {
+        moonPaseLabel.text = "New";
+
+    } else if (phase === moon.fullMoon) {
+        moonPaseLabel.text = "Full";
+
+    } else if ((moon.isWaxing(date) && moon.isWaning(date)) 
+        || (!moon.isWaxing(date) && !moon.isWaning(date))) {
+        // guard condition should not happen, but if it does handle it
+        moonPaseLabel.text = " ";
+
+    } else if (moon.isWaxing(date)) {
+        moonPaseLabel.text = "Wax";
+
+    } else if (moon.isWaning(date)) {
+        moonPaseLabel.text = "Wan";
+
+    } else {
+        // should not get here, but if it does, handle it
+        moonPaseLabel.text = " ";
+    }
+    moonPaseLabel.text = moonPaseLabel.text.toUpperCase();
 }

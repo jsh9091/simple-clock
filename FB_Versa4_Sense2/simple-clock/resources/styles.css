@@ -31,11 +31,21 @@
 
 #moonIcon {
   x: "50% - 13";
-  y: "28%";
+  y: "26%";
   width: "26";
   height: "26";
   fill: black; 
   opacity: 1;
+}
+
+#moonPaseLabel {
+  x: "50%";
+  y: "40%";
+  font-size: 17;
+  font-family: FBNucleon-Bold;
+  text-anchor: middle;
+  text-length: 7;
+  fill: black;
 }
 
 #datelabel {

@@ -230,6 +230,7 @@
   <text id="twelveLabel" class="numbers" x="168" y="55" />
 
   <image id="moonIcon" />
+  <text id="moonPaseLabel" />
   <text id="datelabel" x="50%" y="72%" />
 
   <!-- Clock Hands -->
