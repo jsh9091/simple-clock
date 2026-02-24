@@ -68,6 +68,10 @@ registerSettingsPage(({ settings }) => (
           label="Show Date"
       />
       <Toggle
+          settingsKey="showAmPm"
+          label="Show AM / PM"
+      />
+      <Toggle
           settingsKey="showLunarPhase"
           label="Show Lunar Phase"
       />

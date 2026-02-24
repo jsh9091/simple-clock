@@ -32,6 +32,7 @@ let showSeconds = true;
 let showNumbers = false;
 let showDate = false;
 let showLunarPhase = false;
+let showAmPm = false;
 
 // Tick every second
 clock.granularity = "seconds";
@@ -370,6 +371,12 @@ function settingsCallback(data) {
     updatePhaseLabel(date);
   }
 
+    if (data.showAmPm !== undefined && data.showAmPm !== null) {
+    showAmPm = data.showAmPm;
+
+    amPmDisplay(new Date());
+  }
+
   if (color === "black") {
     updateTickColor("white");
     hourHandRect.style.fill = "white";
@@ -377,6 +384,7 @@ function settingsCallback(data) {
     datelabel.style.fill = "white";
     moonIcon.style.fill = "white";
     moonPaseLabel.style.fill = "white";
+    amPmLabel.style.fill = "white";
   } else {
     updateTickColor("black")
     hourHandRect.style.fill = "black";
@@ -384,6 +392,7 @@ function settingsCallback(data) {
     datelabel.style.fill = "black";
     moonIcon.style.fill = "black";
     moonPaseLabel.style.fill = "black";
+    amPmLabel.style.fill = "black";
   }
 }
 simpleSettings.initialize(settingsCallback);
@@ -626,6 +635,10 @@ function updatePhaseLabel(date) {
  * Updates display of AM and PM indicators. 
  */
 function amPmDisplay(date) {
+    if (!showAmPm) {
+      amPmLabel.text = "";
+      return;
+    }
     let rawHours = date.getHours();
 
     if (rawHours < 12) {
