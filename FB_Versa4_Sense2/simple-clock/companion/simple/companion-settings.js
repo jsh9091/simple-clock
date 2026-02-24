@@ -29,6 +29,7 @@ const KEY_COLOR = "color";
 const KEY_SECONDS = "showSeconds";
 const KEY_NUMBERS = "showNumbers";
 const KEY_DATE = "showDate";
+const KEY_MOON = "showLunarPhase";
 
 /**
  * Establishes values for default settings on fresh install.
@@ -38,6 +39,7 @@ export function setDefaultSettings() {
   setDefaultSetting(KEY_SECONDS, true);
   setDefaultSetting(KEY_NUMBERS, false);
   setDefaultSetting(KEY_DATE, false);
+  setDefaultSetting(KEY_MOON, false);
 }
 
 /**
@@ -76,6 +78,9 @@ export function initialize() {
         newValue = evt.newValue;
 
       } else if (evt.key == KEY_DATE) {
+        newValue = evt.newValue;
+
+      } else if (evt.key == KEY_MOON) {
         newValue = evt.newValue;
       }
 

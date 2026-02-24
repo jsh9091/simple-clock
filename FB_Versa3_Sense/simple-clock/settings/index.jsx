@@ -67,6 +67,10 @@ registerSettingsPage(({ settings }) => (
           settingsKey="showDate"
           label="Show Date"
       />
+      <Toggle
+          settingsKey="showLunarPhase"
+          label="Show Lunar Phase"
+      />
     </Section>
   </Page>
 ));

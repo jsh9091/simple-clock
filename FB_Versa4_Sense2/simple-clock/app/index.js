@@ -31,7 +31,7 @@ let color = "white";
 let showSeconds = true;
 let showNumbers = false;
 let showDate = false;
-let showMoonPhase = false;
+let showLunarPhase = false;
 
 // Tick every second
 clock.granularity = "seconds";
@@ -360,18 +360,28 @@ function settingsCallback(data) {
     updateDateField(new Date());
   }
 
+  if (data.showLunarPhase !== undefined && data.showLunarPhase !== null) {
+    showLunarPhase = data.showLunarPhase;
+
+    let date = new Date();
+    updatePhaseIcon(date);
+    updatePhaseLabel(date);
+  }
+
   if (color === "black") {
     updateTickColor("white");
     hourHandRect.style.fill = "white";
     minuteHandRect.style.fill = "white";
     datelabel.style.fill = "white";
     moonIcon.style.fill = "white";
+    moonPaseLabel.style.fill = "white";
   } else {
     updateTickColor("black")
     hourHandRect.style.fill = "black";
     minuteHandRect.style.fill = "black";
     datelabel.style.fill = "black";
     moonIcon.style.fill = "black";
+    moonPaseLabel.style.fill = "black";
   }
 }
 simpleSettings.initialize(settingsCallback);
@@ -533,37 +543,42 @@ function updateNumbers() {
  * @param {*} date 
  */
 function updatePhaseIcon(date) {
-    const phase = moon.getLunarPhase(date);
+  if (!showLunarPhase) {
+    moonIcon.image = "";
+    return;
+  }
 
-    switch (phase) {
-        case moon.newMoon:
-            moonIcon.image = "moon/new-moon.png";
-        break;
-        case moon.waxingCrescent:
-            moonIcon.image = "moon/waxing-cresent.png";
-        break;
-        case moon.firstQuarter:
-            moonIcon.image = "moon/first-quarter.png";
-        break;
-        case moon.waxingGibbous:
-            moonIcon.image = "moon/waxing-gibbous.png";
-        break;
-        case moon.fullMoon:
-            moonIcon.image = "moon/full-moon.png";
-        break;
-        case moon.waningGibbous:
-            moonIcon.image = "moon/waning-gibbous.png";
-        break;
-        case moon.lastQuarter:
-            moonIcon.image = "moon/last-quarter.png";
-        break;
-        case moon.waningCrescent:
-            moonIcon.image = "moon/waning-cresent.png";
-        break;
-        default: 
-            // something went wrong
-            moonIcon.image = "";
-    }
+  const phase = moon.getLunarPhase(date);
+
+  switch (phase) {
+    case moon.newMoon:
+      moonIcon.image = "moon/new-moon.png";
+      break;
+    case moon.waxingCrescent:
+      moonIcon.image = "moon/waxing-cresent.png";
+      break;
+    case moon.firstQuarter:
+      moonIcon.image = "moon/first-quarter.png";
+      break;
+    case moon.waxingGibbous:
+      moonIcon.image = "moon/waxing-gibbous.png";
+      break;
+    case moon.fullMoon:
+      moonIcon.image = "moon/full-moon.png";
+      break;
+    case moon.waningGibbous:
+      moonIcon.image = "moon/waning-gibbous.png";
+      break;
+    case moon.lastQuarter:
+      moonIcon.image = "moon/last-quarter.png";
+      break;
+    case moon.waningCrescent:
+      moonIcon.image = "moon/waning-cresent.png";
+      break;
+    default:
+      // something went wrong
+      moonIcon.image = "";
+  }
 }
 
 /**
@@ -574,28 +589,33 @@ function updatePhaseIcon(date) {
  * @param {*} date 
  */
 function updatePhaseLabel(date) {
-    const phase = moon.getLunarPhase(date);
+  if (!showLunarPhase) {
+    moonPaseLabel.text = "";
+    return;
+  }
 
-    if (phase === moon.newMoon) {
-        moonPaseLabel.text = "New";
+  const phase = moon.getLunarPhase(date);
 
-    } else if (phase === moon.fullMoon) {
-        moonPaseLabel.text = "Full";
+  if (phase === moon.newMoon) {
+    moonPaseLabel.text = "New";
 
-    } else if ((moon.isWaxing(date) && moon.isWaning(date)) 
-        || (!moon.isWaxing(date) && !moon.isWaning(date))) {
-        // guard condition should not happen, but if it does handle it
-        moonPaseLabel.text = " ";
+  } else if (phase === moon.fullMoon) {
+    moonPaseLabel.text = "Full";
 
-    } else if (moon.isWaxing(date)) {
-        moonPaseLabel.text = "Wax";
+  } else if ((moon.isWaxing(date) && moon.isWaning(date))
+    || (!moon.isWaxing(date) && !moon.isWaning(date))) {
+    // guard condition should not happen, but if it does handle it
+    moonPaseLabel.text = " ";
 
-    } else if (moon.isWaning(date)) {
-        moonPaseLabel.text = "Wan";
+  } else if (moon.isWaxing(date)) {
+    moonPaseLabel.text = "Wax";
 
-    } else {
-        // should not get here, but if it does, handle it
-        moonPaseLabel.text = " ";
-    }
-    moonPaseLabel.text = moonPaseLabel.text.toUpperCase();
+  } else if (moon.isWaning(date)) {
+    moonPaseLabel.text = "Wan";
+
+  } else {
+    // should not get here, but if it does, handle it
+    moonPaseLabel.text = " ";
+  }
+  moonPaseLabel.text = moonPaseLabel.text.toUpperCase();
 }
