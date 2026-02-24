@@ -231,6 +231,7 @@
 
   <image id="moonIcon" />
   <text id="moonPaseLabel" />
+  <text id="amPmLabel" />
   <text id="datelabel" x="50%" y="72%" />
 
   <!-- Clock Hands -->

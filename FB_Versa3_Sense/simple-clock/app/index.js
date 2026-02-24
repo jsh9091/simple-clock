@@ -50,6 +50,7 @@ let backgroundCircle = document.getElementById("backgroundCircle");
 let datelabel = document.getElementById("datelabel");
 let moonIcon = document.getElementById("moonIcon");
 let moonPaseLabel = document.getElementById("moonPaseLabel");
+let amPmLabel = document.getElementById("amPmLabel");
 
 // get a handle on tickmarks groups
 let oneMinTick = document.getElementById("oneMinTick");
@@ -206,6 +207,7 @@ function updateClock() {
   updatePhaseIcon(today);
   updatePhaseLabel(today);
   updateDateField(today);
+  amPmDisplay(today);
 }
 
 // Update the clock every tick event
@@ -618,4 +620,17 @@ function updatePhaseLabel(date) {
     moonPaseLabel.text = " ";
   }
   moonPaseLabel.text = moonPaseLabel.text.toUpperCase();
+}
+
+/**
+ * Updates display of AM and PM indicators. 
+ */
+function amPmDisplay(date) {
+    let rawHours = date.getHours();
+
+    if (rawHours < 12) {
+        amPmLabel.text = "AM";
+      } else {
+        amPmLabel.text = "PM";
+      }
 }
