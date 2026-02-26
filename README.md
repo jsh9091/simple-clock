@@ -1,5 +1,5 @@
 # Simple Clock
-Simple Clock is a clock face displaying a very basic analog time display. Optional settings include different background colors and turning off the seconds hand. 
+Simple Clock is a clock face displaying a very basic analog time display. Optional settings include different background colors, showing hour numbers, current date, lunar phase, and turning off the seconds hand.
 
 Note: This clockface is not yet published to the Fitbit app store.
 
