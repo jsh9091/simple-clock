@@ -40,8 +40,8 @@
 
 #moonPaseLabel {
   x: "50%";
-  y: "40%";
-  font-size: 17;
+  y: "41%";
+  font-size: 20;
   font-family: FBNucleon-Bold;
   text-anchor: middle;
   text-length: 4;
@@ -50,8 +50,8 @@
 
 #amPmLabel {
   x: "50%";
-  y: "62%";
-  font-size: 20;
+  y: "63%";
+  font-size: 22;
   font-family: FBNucleon-Bold;
   text-anchor: middle;
   text-length: 3;
