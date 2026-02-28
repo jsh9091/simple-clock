@@ -36,12 +36,12 @@ const KEY_AMPM = "showAmPm";
  * Establishes values for default settings on fresh install.
  */
 export function setDefaultSettings() {
-  setDefaultSetting(KEY_COLOR, "white");
+  setDefaultSetting(KEY_COLOR, "black");
   setDefaultSetting(KEY_SECONDS, true);
-  setDefaultSetting(KEY_NUMBERS, false);
-  setDefaultSetting(KEY_DATE, false);
-  setDefaultSetting(KEY_MOON, false);
-  setDefaultSetting(KEY_AMPM, false);
+  setDefaultSetting(KEY_NUMBERS, true);
+  setDefaultSetting(KEY_DATE, true);
+  setDefaultSetting(KEY_MOON, true);
+  setDefaultSetting(KEY_AMPM, true);
 }
 
 /**

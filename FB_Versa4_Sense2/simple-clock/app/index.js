@@ -27,12 +27,12 @@ import * as document from "document";
 import * as simpleSettings from "./simple/device-settings";
 import * as moon from "./lunarcalculator";
 
-let color = "white";
+let color = "black";
 let showSeconds = true;
-let showNumbers = false;
-let showDate = false;
-let showLunarPhase = false;
-let showAmPm = false;
+let showNumbers = true;
+let showDate = true;
+let showLunarPhase = true;
+let showAmPm = true;
 
 // Tick every second
 clock.granularity = "seconds";
@@ -191,6 +191,7 @@ let elevenLabel = document.getElementById("elevenLabel");
 let twelveLabel = document.getElementById("twelveLabel");
 
 setTickMarks();
+setColor();
 
 /**
  * Rotates the clock hands to show the curent time.
@@ -376,24 +377,7 @@ function settingsCallback(data) {
 
     amPmDisplay(new Date());
   }
-
-  if (color === "black") {
-    updateTickColor("white");
-    hourHandRect.style.fill = "white";
-    minuteHandRect.style.fill = "white";
-    datelabel.style.fill = "white";
-    moonIcon.style.fill = "white";
-    moonPaseLabel.style.fill = "white";
-    amPmLabel.style.fill = "white";
-  } else {
-    updateTickColor("black")
-    hourHandRect.style.fill = "black";
-    minuteHandRect.style.fill = "black";
-    datelabel.style.fill = "black";
-    moonIcon.style.fill = "black";
-    moonPaseLabel.style.fill = "black";
-    amPmLabel.style.fill = "black";
-  }
+  setColor();
 }
 simpleSettings.initialize(settingsCallback);
 
@@ -419,6 +403,25 @@ function setColor() {
       secondHandCenter.style.fill = "black";
     }
   }
+
+  if (color === "black") {
+    updateTickColor("white");
+    hourHandRect.style.fill = "white";
+    minuteHandRect.style.fill = "white";
+    datelabel.style.fill = "white";
+    moonIcon.style.fill = "white";
+    moonPaseLabel.style.fill = "white";
+    amPmLabel.style.fill = "white";
+  } else {
+    updateTickColor("black")
+    hourHandRect.style.fill = "black";
+    minuteHandRect.style.fill = "black";
+    datelabel.style.fill = "black";
+    moonIcon.style.fill = "black";
+    moonPaseLabel.style.fill = "black";
+    amPmLabel.style.fill = "black";
+  }
+
   updateNumbers();
 }
 

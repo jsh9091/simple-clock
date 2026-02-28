@@ -34,7 +34,10 @@ registerSettingsPage(({ settings }) => (
       <ColorSelect
         settingsKey="color"
         colors={[
+          { color: "black" },
           { color: "white" },
+          { color: "red" },
+          { color: "yellow" },
           { color: "cyan" },
           { color: "gold" },
           { color: "goldenrod" },
@@ -49,10 +52,7 @@ registerSettingsPage(({ settings }) => (
           { color: "skyblue" },
           { color: "violet" },
           { color: "wheat" },
-          { color: "yellow" },
           { color: "yellowgreen" },
-          { color: "red" },
-          { color: "black" },
         ]}
       />
       <Toggle

@@ -13,11 +13,11 @@
 
 .minorTick {
   width: 3;
-  fill: black;
+  fill: white;
 }
 
 .majorTick {
-  fill: black;
+  fill: white;
   width: 6;
 }
 
@@ -26,7 +26,7 @@
   font-family: FBNucleon-Black;
   text-anchor: middle;
   text-length: 3;
-  fill: black;
+  fill: white;
 }
 
 #moonIcon {
@@ -34,7 +34,7 @@
   y: "25%";
   width: "26";
   height: "26";
-  fill: black; 
+  fill: white; 
   opacity: 1;
 }
 
@@ -45,7 +45,7 @@
   font-family: FBNucleon-Bold;
   text-anchor: middle;
   text-length: 4;
-  fill: black;
+  fill: white;
 }
 
 #amPmLabel {
@@ -55,7 +55,7 @@
   font-family: FBNucleon-Bold;
   text-anchor: middle;
   text-length: 3;
-  fill: black;
+  fill: white;
 }
 
 #datelabel {
@@ -63,5 +63,5 @@
   font-family: FBNucleon-Bold;
   text-anchor: middle;
   text-length: 7;
-  fill: black;
+  fill: white;
 }
