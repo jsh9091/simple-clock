@@ -39,7 +39,11 @@ clock.granularity = "seconds";
 
 // Get a handle on GUI label elements
 let hourHand = document.getElementById("hourHand");
+let hourHandShadow = document.getElementById("hourHandShadow");
+let hourHandShadowRect = document.getElementById("hourHandShadowRect");
 let minuteHand = document.getElementById("minuteHand");
+let minuteHandShadow = document.getElementById("minuteHandShadow");
+let minuteHandShadowRect = document.getElementById("minuteHandShadowRect");
 let secondHand = document.getElementById("secondHand");
 let hourHandRect = document.getElementById("hourHandRect");
 let minuteHandRect = document.getElementById("minuteHandRect");
@@ -203,7 +207,9 @@ function updateClock() {
   let secs = today.getSeconds();
 
   hourHand.groupTransform.rotate.angle = hoursToAngle(hours, mins);
+  hourHandShadow.groupTransform.rotate.angle = hoursToAngle(hours, mins);
   minuteHand.groupTransform.rotate.angle = minutesToAngle(mins);
+  minuteHandShadow.groupTransform.rotate.angle = minutesToAngle(mins);
   secondHand.groupTransform.rotate.angle = secondsToAngle(secs);
 
   updatePhaseIcon(today);
@@ -412,6 +418,8 @@ function setColor() {
     moonIcon.style.fill = "white";
     moonPaseLabel.style.fill = "white";
     amPmLabel.style.fill = "white";
+    hourHandShadowRect.style.display = "inline";
+    minuteHandShadowRect.style.display = "inline";
   } else {
     updateTickColor("black")
     hourHandRect.style.fill = "black";
@@ -420,6 +428,8 @@ function setColor() {
     moonIcon.style.fill = "black";
     moonPaseLabel.style.fill = "black";
     amPmLabel.style.fill = "black";
+    hourHandShadowRect.style.display = "none";
+    minuteHandShadowRect.style.display = "none";
   }
 
   updateNumbers();
